@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingCart, Star, Clock, MapPin, Phone, Mail, Menu, X, Plus, Minus } from 'lucide-react';
+import pizza from './assets/pizza.png'
+import pizzaBoard from './assets/home-board.png'
+import homeMushroom from './assets/home-mushroom.png';
+import homeLeaf1 from './assets/home-leaf-1.png';
+import homeLeaf2 from './assets/home-leaf-2.png';
+import hometamato from './assets/home-tomato.png';
+import homeolive from './assets/home-olive.png';
+import homepepperoni from './assets/home-pepperoni.png';
+
+
+
 
 const PizzaWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -172,113 +183,111 @@ const PizzaWebsite = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                    Delicious
-                  </span>
-                  <br />
-                  <span className="text-gray-800">Pizza</span>
-                  <br />
-                  <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                    Delivered
-                  </span>
-                </h1>
-                <p className="text-xl text-gray-600 max-w-lg">
-                  Authentic Italian pizzas made with fresh ingredients and delivered hot to your door in 30 minutes or less.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-                  Order Now
-                </button>
-                <button className="border-2 border-red-500 text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-200">
-                  View Menu
-                </button>
-              </div>
+{/* Hero Section */}
+<section id="home" className="pt-16 min-h-screen flex items-center overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="space-y-8">
+        <div className="space-y-4">
+          <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+            <span className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
+              Delicious
+            </span>
+            <br />
+            <span className="text-gray-800">Pizza</span>
+            <br />
+            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              Delivered
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-lg">
+            Authentic Italian pizzas made with fresh ingredients and delivered hot to your door in 30 minutes or less.
+          </p>
+        </div>
+        
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+            Order Now
+          </button>
+          <button className="border-2 border-red-500 text-red-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-200">
+            View Menu
+          </button>
+        </div>
 
-              <div className="flex items-center space-x-8 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600">30min</div>
-                  <div className="text-gray-600">Delivery</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600">4.9★</div>
-                  <div className="text-gray-600">Rating</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600">1000+</div>
-                  <div className="text-gray-600">Orders</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="relative z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=600&fit=crop"
-                  alt="Delicious Pizza"
-                  className="w-full h-auto rounded-full shadow-2xl"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-red-400/20 to-orange-400/20 rounded-full blur-3xl transform scale-110"></div>
-            </div>
+        <div className="flex items-center space-x-8 pt-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-600">30min</div>
+            <div className="text-gray-600">Delivery</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-600">4.9★</div>
+            <div className="text-gray-600">Rating</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-600">1000+</div>
+            <div className="text-gray-600">Orders</div>
           </div>
         </div>
-      </section>
+      </div>
+      
+      <div className="relative w-[400px] h-[400px] mx-auto">
+        {/* Background Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/20 to-red-400/20 rounded-full blur-3xl scale-110 -z-10"></div>
 
-      {/* Menu Section */}
-      <section id="menu" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Our <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Menu</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our handcrafted pizzas made with the finest ingredients and traditional techniques.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pizzas.map((pizza) => (
-              <div key={pizza.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={pizza.image}
-                    alt={pizza.name}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="font-semibold text-sm">{pizza.rating}</span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{pizza.name}</h3>
-                  <p className="text-gray-600 mb-4">{pizza.description}</p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-red-600">${pizza.price}</span>
-                    <button 
-                      onClick={() => addToCart(pizza)}
-                      className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Pizza Board */}
+        <img 
+          src={pizzaBoard}
+          alt="Pizza Board"
+          className="absolute bottom-[-0.5rem] left-[-0.15rem] w-[400px] z-0 drop-shadow-lg"
+        />
+
+        {/* Pizza */}
+        <img 
+          src={pizza}
+          alt="Delicious Pizza"
+          className="absolute top-0 left-0 w-[400px] z-10 drop-shadow-xl transition-transform duration-300 hover:scale-105"
+        />
+
+        {/* Floating Ingredients - Larger and with enhanced animations */}
+        <img 
+          src={hometamato}
+          alt="Tomato Slice"
+          className="absolute w-16 h-16 top-[-30px] left-[45%] rotate-[20deg] z-20 animate-float1"
+        />
+        <img 
+          src={homeLeaf1}
+          alt="Leaf 1"
+          className="absolute w-14 h-14 top-[20px] right-[10%] rotate-[-15deg] z-20 animate-float2"
+        />
+        <img 
+          src={homeLeaf2}
+          alt="Leaf 2"
+          className="absolute w-14 h-14 bottom-[40px] left-[20%] rotate-[25deg] z-20 animate-float3"
+        />
+        <img 
+          src={homeolive}
+          alt="Olive"
+          className="absolute w-12 h-12 bottom-[-30px] left-[5%] rotate-[35deg] z-20 animate-float4"
+        />
+        <img 
+          src={homeMushroom}
+          alt="Mushroom"
+          className="absolute w-16 h-16 bottom-[40px] right-[8%] rotate-[10deg] z-20 animate-float5"
+        />
+        <img 
+          src={homepepperoni}
+          alt="Pepperoni"
+          className="absolute w-16 h-16 top-[55%] left-[-30px] rotate-[-25deg] z-20 animate-float6"
+        />
+        {/* <img 
+          src={homecheese}
+          alt="Cheese"
+          className="absolute w-14 h-14 top-[20%] right-[-20px] rotate-[15deg] z-20 animate-float1"
+        /> */}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
@@ -289,8 +298,10 @@ const PizzaWebsite = () => {
                 About <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">PizzaCraft</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded in 1985, PizzaCraft has been serving authentic Italian pizzas to our community for over 35 years. 
-                Our commitment to quality ingredients and traditional recipes has made us the favorite pizza destination.
+               The secret to success is the best ingredients 
+                to make a better pizza. Today we strive for 
+                perfection, just as we have been doing for 15 years 
+                when we first opened the pizzeria in Lima - Peru.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Every pizza is handcrafted with love using our secret family recipe for the dough, premium San Marzano tomatoes, 
