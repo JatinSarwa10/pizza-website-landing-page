@@ -20,6 +20,7 @@ A modern and responsive landing page for a pizza restaurant or delivery service.
 - **Google Fonts**
 - **Font Awesome**
 
-```bash git clone
+**Clone the Repository**
+```bash
  https://github.com/JatinSarwa10/pizza-website-landing-page
 
